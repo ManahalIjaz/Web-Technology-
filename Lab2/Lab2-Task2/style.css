@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #111827;
+    z-index: 1000;
+
+}
+nav h2{
+    color: white;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #38bdf8;
+}
+#Home{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQluof1jNUWStO9z4erPabsvz5loOMedxt3vJ7xGkXfksyXlnyIaIOfkt8&s=10);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+
+}
+#Home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+#Home h1, #Home p, #Home .cta-button {
+    position: relative;
+    z-index: 1;
+}
+#Home h1 {
+    color: white;
+    font-size: 55px;
+    max-width: 700px;
+    padding-top: 180px;
+    margin-left: 60px;
+}
+#Home p {
+    color: white;
+    font-size: 18px;
+    max-width: 650px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.cta-button {
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #38bdf8;
+    color: #0a1c42;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    transform: translateY(-4px);
+}
+#Services {
+    background-color: #f1f5f9;
+    color: #111827;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+#Services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#Services ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#Services li {
+    background-color: white;
+    padding: 35px 25px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+#Services li:hover {
+    transform: translateY(-8px);
+}
+#AboutUs {
+    background-color: #0f172a;
+    color: white;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+#AboutUs h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+#AboutUs p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.8;
+}
+#Contact {
+    background-color: #020617;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#Contact h2 {
+    margin-bottom: 20px;
+}
+
+#Contact p {
+    margin: 8px 0;
+}
+
+#Contact address {
+    margin: 8px 0;
+}
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #Home {
+        min-height: 90vh;
+        padding: 120px 25px;
+        text-align: center;
+    }
+
+    #Home h1 {
+        font-size: 40px;
+        padding-top: 50px;
+        margin-left: 0;
+    }
+
+    #Home p {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    #Home .cta-button {
+        margin-left: 0;
+    }
+
+    #Services {
+        padding: 60px 20px;
+    }
+
+    #Services li {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #AboutUs {
+        padding: 60px 25px;
+    }
+
+    #AboutUs p {
+        font-size: 16px;
+    }
+}
