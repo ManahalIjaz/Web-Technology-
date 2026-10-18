@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.score-board {
+    width: 450px;
+    max-width: 100%;
+    margin: 0 auto 15px;
+    padding: 12px;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.score-board div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.score-board span {
+    font-size: 14px;
+}
+
+.score-board strong {
+    font-size: 18px;
+}
+
+.road {
+    width: 400px;
+    height: 600px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: #444;
+    border-left: 10px solid #ddd;
+    border-right: 10px solid #ddd;
+}
+
+.road-line {
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: roadMove 1.5s linear infinite;
+}
+
+.line1 {
+    top: -100px;
+}
+
+.line2 {
+    top: 100px;
+    animation-delay: 0.4s;
+}
+
+.line3 {
+    top: 300px;
+    animation-delay: 0.8s;
+}
+
+.line4 {
+    top: 500px;
+    animation-delay: 1.2s;
+}
+
+@keyframes roadMove {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 650px;
+    }
+}
+
+.player {
+    position: absolute;
+    bottom: 25px;
+    left: 42%;
+    font-size: 45px;
+}
+
+.enemy {
+    position: absolute;
+    font-size: 40px;
+    top: -100px;
+    animation: enemyMove 4s linear infinite;
+}
+
+.enemy1 {
+    left: 15%;
+}
+
+.enemy2 {
+    left: 48%;
+    animation-delay: 1.5s;
+}
+
+.enemy3 {
+    left: 72%;
+    animation-delay: 3s;
+}
+
+@keyframes enemyMove {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 650px;
+    }
+}
+
+.instructions {
+    color: white;
+    margin: 15px 0;
+}
+
+.start-btn {
+    padding: 12px 25px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+
+    .game-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .road {
+        width: 280px;
+        height: 500px;
+    }
+
+    .player {
+        left: 38%;
+    }
+
+    .score-board {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .road {
+        max-width: 90%;
+    }
+}
